@@ -1,0 +1,47 @@
+﻿body {
+    padding: 0px 50px;
+    color: rgba(0,0,0,.7);
+    background-color: ghostwhite;
+}
+
+header {
+    text-align: center;
+    font-family: Calibri;
+    margin-bottom: 20px;
+    padding: 2px 0;
+    background-color: whitesmoke;
+}
+
+h1 {
+    color: dimgray;
+}
+
+h2 {
+    color: gray;
+}
+
+#trigger {
+    width: 200px;
+    height: 200px;
+    border: 20px solid lightgrey;
+    background-color: darkgrey;
+    border-radius: 50%;
+}
+
+.box {
+    display: inline-block;
+    background-color: deeppink;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    /*how will the transition happen, slowly, with a delay, how long*/
+    transition: transform 300ms ease-in-out;
+    /*do not let box be a trigger only trigger*/
+    pointer-events: none;
+}
+
+#trigger:hover .box {
+    /*TRANSLATE: moves box 200px to the right/150px down*/
+    /*ROTATE: turns the box by 20 degrees*/
+    transform: translate(200px, 150px) rotate(20deg);
+}
